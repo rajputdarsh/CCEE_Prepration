@@ -1,0 +1,132 @@
+							can we create private constructor?
+
+
+
+
+The use of private constructor is to serve singleton classes. A singleton class is one which limits the number of objects creation to one. Using private constructor we can ensure that no more than one object can be created at a time. By providing a private constructor you prevent class instances from being created in any place other than this very class. We will see in the below example how to use private constructor for limiting the number of objects for a singleton class.
+
+
+								native keyword in java
+
+The native keyword is applied to a method to indicate that the method is implemented in native code using JNI (Java Native Interface). native is a modifier applicable only for methods and we can’t apply it anywhere else. The methods which are implemented in C, C++ are called as native methods or foreign methods.
+
+The main objectives of native keyword are:
+
+To improve performance of the system.
+To achieve machine level/memory level communication.
+To use already existing legacy non-java code.
+
+The main advantage of native keyword is improvement in performance but the main disadvantage of native keyword is that it breaks platform independent nature of java.
+Declaring Native Methods: In this section we explain how to declare a native method in Java and how to generate the corresponding C/C++ function prototype.
+
+private native String getLine(String prompt);
+
+
+garbage collection
+
+https://www.javatpoint.com/Garbage-Collection
+
+
+
+				Java instanceof Keyword
+
+Check whether an object is an instance of a specific class:
+
+public class Main {
+  public static void main(String[] args) {
+    Main myObj = new Main();
+    System.out.println(myObj instanceof Main); // returns true
+  }
+}
+
+Definition and Usage
+The instanceof keyword checks whether an object is an instance of a specific class or an interface.
+
+The instanceof keyword compares the instance with type. The return value is either true or false.
+
+
+
+				 Serialization Interface
+
+
+https://www.youtube.com/watch?v=6B6vp0jZnb0&ab_channel=edureka%21
+
+
+
+			Difference between Call by Value and Call by Reference
+
+https://www.geeksforgeeks.org/difference-between-call-by-value-and-call-by-reference/
+
+
+
+
+					typedef in C
+
+The typedef is a keyword used in C programming to provide some meaningful names to the already existing variable in the C program. It behaves similarly as we define the alias for the commands. In short, we can say that this keyword is used to redefine the name of an already existing variable.
+
+Syntax of typedef
+typedef <existing_name> <alias_name>  
+In the above syntax, 'existing_name' is the name of an already existing variable while 'alias name' is another name given to the existing variable.
+
+For example, suppose we want to create a variable of type unsigned int, then it becomes a tedious task if we want to declare multiple variables of this type. To overcome the problem, we use a typedef keyword.
+
+
+
+						struct vs union vs enum
+
+https://pediaa.com/what-is-the-difference-between-structure-union-and-enum-in-c/#:~:text=That%20is%20the%20main%20difference,of%20a%20single%20data%20type.&text=Structure%20and%20union%20are%20two,a%20set%20of%20named%20constants.
+
+
+
+
+							
+						TYPECASTING IN JAVA
+
+Java Type Casting
+Type casting is when you assign a value of one primitive data type to another type.
+
+In Java, there are two types of casting:
+
+--->Widening Casting (automatically) - converting a smaller type to a larger type size
+byte -> short -> char -> int -> long -> float -> double
+
+Widening casting is done automatically when passing a smaller size type to a larger size type:
+Example
+public class Main {
+  public static void main(String[] args) {
+    int myInt = 9;
+    double myDouble = myInt; // Automatic casting: int to double
+
+    System.out.println(myInt);      // Outputs 9
+    System.out.println(myDouble);   // Outputs 9.0
+  }
+}
+
+---->Narrowing Casting (manually) - converting a larger type to a smaller size type
+double -> float -> long -> int -> char -> short -> byte
+
+Narrowing Casting
+Narrowing casting must be done manually by placing the type in parentheses in front of the value:
+
+Example
+public class Main {
+  public static void main(String[] args) {
+    double myDouble = 9.78;
+    int myInt = (int) myDouble; // Manual casting: double to int
+
+    System.out.println(myDouble);   // Outputs 9.78
+    System.out.println(myInt);      // Outputs 9
+  }
+}
+
+
+
+
+			Java Hashtable class
+Java Hashtable class implements a hashtable, which maps keys to values. It inherits Dictionary class and implements the Map interface.
+
+Points to remember
+A Hashtable is an array of a list. Each list is known as a bucket. The position of the bucket is identified by calling the hashcode() method. A Hashtable contains values based on the key.
+Java Hashtable class contains unique elements.
+Java Hashtable class doesn't allow null key or value.
+Java Hashtable class is synchronized.

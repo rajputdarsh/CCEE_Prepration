@@ -1,0 +1,460 @@
+		Understanding of String Class, StringBuilder Class, StringBuffer class
+
+
+.String: String is a sequence of characters. In java, objects of String are immutable which means a constant and cannot be changed once created.
+Creating a String
+
+There are two ways to create string in Java:
+
+.String literal
+	String s = “GeeksforGeeks”;
+.Using new keyword
+	String s = new String (“GeeksforGeeks”);
+
+.StringBuffer: StringBuffer is a peer class of String that provides much of the functionality of strings. String represents fixed-length, immutable character sequences while StringBuffer represents growable and writable character sequences.
+
+.StringBuilder: The StringBuilder in Java represents a mutable sequence of characters. Since the String Class in Java creates and immutable sequence of characters, the StringBuilder class provides an alternate to String Class, as it creates a mutable sequence of characters.
+	
+						Wrapper class
+
+A Wrapper class is a class which contains the primitive data types (int, char, short, byte, etc). In other words, wrapper classes provide a way to use primitive data types (int, char, short, byte, etc) as objects. These wrapper classes come under java.util package.
+
+==>Why we need Wrapper Class
+.Wrapper Class will convert primitive data types into objects. The objects are necessary if we wish to modify the arguments passed into the method (because primitive types are passed by value).
+.The classes in java.util package handles only objects and hence wrapper classes help in this case also.
+.Data structures in the Collection framework such as ArrayList and Vector store only the objects (reference types) and not the primitive types.
+.The object is needed to support synchronization in multithreading.
+
+-->Autoboxing in Wrapper Class
+Autoboxing:" Converting a primitive value into an object of the corresponding wrapper class is called autoboxing." .For example, converting int to Integer class. The Java compiler applies autoboxing when a primitive value is:
+  Passed as a parameter to a method that expects an object of the corresponding wrapper class.
+  Assigned to a variable of the corresponding wrapper class.
+
+-->Unboxing in Wrapper Class
+Unboxing is used to convert the Wrapper class object into corresponding primitive data types
+
+
+
+
+				==>How to create Immutable class in Java?
+
+Immutable class means that once an object is created, we cannot change its content. In Java, all the wrapper classes (like Integer, Boolean, Byte, Short) and String class is immutable. We can create our own immutable class as well. 
+ 
+
+Following are the requirements: 
+ 
+.The class must be declared as "final "(So that child classes can’t be created)
+.Data members in the class must be declared as "private " (So that direct access is not allowed)
+.Data members in the class must be declared as final (So that we can’t change the value of it after object creation)
+.A parametrized constructor should initialize all the fields performing a deep copy (So that data members can’t be modified with object reference)
+.Deep Copy of objects should be performed in the getter methods (To return a copy rather than returning the actual object reference)
+.No setters (To not have the option to change the value of the instance variable)
+
+					points to remember in access modifiers
+
+.Final
+If you don't want the ability to override existing attribute values, declare attributes as final
+
+.A "static" method means that it can be accessed without creating an object of the class, unlike public-here we have to create an object and then call the method.
+
+.An "abstract method "belongs to an abstract class, and it does not have a body. The body is provided by the subclass:which will extend the abstract class
+
+					Abstract class
+.The abstract keyword is a non-access modifier, used for classes and methods
+
+.Abstract class: is a restricted class that cannot be used to create objects (to access it, it must be inherited from another class).
+
+.Abstract method: can only be used in an abstract class, and it does not have a body. The body is provided by the subclass (inherited from).
+.An abstract class can have both abstract and regular methods
+
+				Why And When To Use Abstract Classes and Methods?
+
+.To achieve security - hide certain details and only show the important details of an object.
+Note: Abstraction can also be achieved with Interfaces
+
+
+					Notes on Interfaces:
+
+// interface
+interface Animal {
+  public void animalSound(); // interface method (does not have a body)
+  public void run(); // interface method (does not have a body)
+}
+
+-->Like abstract classes, interfaces cannot be used to create objects (in the example above, it is not possible to create an "Animal" object in the MyMainClass)
+-->Interface methods do not have a body - the body is provided by the "implement" class
+-->On implementation of an interface, you must override all of its methods
+-->Interface methods are by default abstract and public
+-->Interface attributes are by default public, static and final
+-->An interface cannot contain a constructor (as it cannot be used to create objects)
+
+				Why And When To Use Interfaces?
+
+1) To achieve security - hide certain details and only show the important details of an object (interface).
+
+2) Java does not support "multiple inheritance" (a class can only inherit from one superclass). However, it can be achieved with interfaces, because the class can implement multiple interfaces. Note: To implement multiple interfaces, separate them with a comma 
+
+
+				Difference between object and reference
+When you create an object of a class as −
+Student obj = new Student();
+
+The objects are created in the heap area and, the reference obj just points out to the object of the Student class in the heap, i.e. it just holds the memory address of the object (in the heap).
+
+						Virtual method in java
+
+All functions in Java are virtual by default.
+
+You have to go out of your way to write non-virtual functions by adding the "final" keyword along with private methods, which are not inherited, are non-virtual
+
+This is the opposite of the C++/C# default. Class functions are non-virtual by default; you make them so by adding the "virtual" modifier.
+
+						Method Overriding
+Method overriding is used for runtime polymorphism
+
+Rules for Java Method Overriding:
+The method must have the same name as in the parent class
+The method must have the same parameter as in the parent class.
+There must be an IS-A relationship (inheritance).
+
+-->Can we override static method?
+No, a static method cannot be overridden.
+
+==>Why can we not override static method?
+It is because the static method is bound with class whereas instance method is bound with an object. Static belongs to the class area, and an instance belongs to the heap area.
+
+-->Can we override java main method?
+No, because the main is a static method.
+
+
+						Exception
+==>Checked exceptions   − A checked exception is an exception that is checked (notified) by the compiler at compilation-time, these are also called as compile time exceptions. These exceptions cannot simply be ignored, the programmer should take care of (handle) these exceptions.
+
+-->Unchecked exceptions   − An unchecked exception is an exception that occurs at the time of execution. These are also called as Runtime Exceptions. These include programming bugs, such as logic errors or improper use of an API. Runtime exceptions are ignored at the time of compilation.
+
+For example, if you have declared an array of size 5 in your program, and trying to call the 6th element of the array then an ArrayIndexOutOfBoundsExceptionexception occurs.
+
+
+-->Catching Multiple Type of Exceptions"
+catch (IOException|FileNotFoundException ex) {
+}
+
+-->The Throws/Throw Keywords:=
+Throws :-If a method does not handle a checked exception, the method must declare it using the "throws" keyword. The throws keyword appears at the end of a method's signature.
+
+	Throw :- The throw statement allows you to create a custom error.
+
+The throw statement is used together with an exception type. There are many exception types available in Java: ArithmeticException, FileNotFoundException, ArrayIndexOutOfBoundsException, SecurityException, etc:
+
+
+-->The Finally Block
+The finally block follows a try block or a catch block. A finally block of code always executes, irrespective of occurrence of an Exception.
+
+
+-->User-defined Exceptions
+You can create your own exceptions in Java. Keep the following points in mind when writing your own exception classes :−
+
+.All exceptions must be a child of Throwable.
+
+.If you want to write a checked exception that is automatically enforced by the Handle or Declare Rule, you need to extend the Exception class.
+
+.If you want to write a runtime exception, you need to extend the RuntimeException class.
+
+.We can define our own Exception class as below −
+
+	class MyException extends Exception {
+	}
+
+
+
+						Enum
+
+.An enum is a special "class" that represents a group of constants (unchangeable variables, like final variables).
+
+.To create an enum, use the enum keyword (instead of class or interface), and separate the constants with a comma. .Note that they should be in uppercase letters:
+
+Example
+enum Level {
+  LOW,
+  MEDIUM,
+  HIGH
+}
+You can access enum constants with the dot syntax:
+Level myVar = Level.MEDIUM;
+
+	-->Difference between Enums and Classes
+.An enum can, just like a class, have attributes and methods. The only difference is that enum constants are public, static and final (unchangeable - cannot be overridden).
+
+.An enum cannot be used to create objects, and it cannot extend other classes (but it can implement interfaces).
+
+-->Why And When To Use Enums?
+Use enums when you have values that you know aren't going to change, like month days, days, colors, deck of cards, etc.
+
+
+						Annotations
+
+-->Built-In Java Annotations used in Java code
+@Override
+@SuppressWarnings
+@Deprecated
+
+-->Built-In Java Annotations used in other annotations
+@Target
+@Retention
+@Inherited
+@Documented
+
+
+-->@Override
+@Override annotation assures that the subclass method is overriding the parent class method. If it is not so, compile time error occurs.
+
+-->@SuppressWarnings
+@SuppressWarnings annotation: is used to suppress warnings issued by the compiler.
+
+-->@Deprecated
+@Deprecated annoation marks that this method is deprecated so compiler prints warning. It informs user that it may be removed in the future versions. So, it is better not to use such methods.
+
+					
+						lambda expression
+
+A lambda expression is characterized by the following syntax.
+                    parameter -> expression body
+
+Following are the important characteristics of a lambda expression.
+
+.Optional type declaration − No need to declare the type of a parameter. The compiler can inference the same from the value of the parameter.
+
+.Optional parenthesis around parameter − No need to declare a single parameter in parenthesis. For multiple parameters, parentheses are required.
+
+.Optional curly braces − No need to use curly braces in expression body if the body contains a single statement.
+
+.Optional return keyword − The compiler automatically returns the value if the body has a single expression to return the value. Curly braces are required to indicate that expression returns a value.
+
+
+			Java 8 provides following features for Java Programming:
+
+.Lambda expressions,
+.Method references,
+.Functional interfaces,
+.Stream API,
+.Default methods,
+.Base64 Encode Decode,
+.Static methods in interface,
+.Optional class,
+.Collectors class,
+.ForEach() method,
+.Parallel array sorting,
+.Nashorn JavaScript Engine,
+.Parallel Array Sorting,
+.Type and Repating Annotations,
+.IO Enhancements,
+.Concurrency Enhancements,
+.JDBC Enhancements etc.
+
+
+		Generics in Java
+
+Generics means parameterized types. The idea is to allow type (Integer, String, … etc, and user-defined types) to be a parameter to methods, classes, and interfaces. Using Generics, it is possible to create classes that work with different data types
+
+		Advantages of Generics:
+
+
+1.Code Reuse: We can write a method/class/interface once and use for any type we want.
+
+2.Type Safety : Generics make errors to appear compile time than at run time . Suppose you want to create an ArrayList that store name of students and if by mistake programmer adds an integer object instead of string, compiler allows it. But, when we retrieve this data from ArrayList, it causes problems at runtime.
+
+3.Individual Type Casting is not needed: 
+
+
+	Multi-threaded programming
+
+Multithreading is a Java feature that allows concurrent execution of two or more parts of a program for maximum utilization of CPU. Each part of such program is called a thread. So, threads are light-weight processes within a process.
+
+Threads can be created by using two mechanisms :
+1. Extending the Thread class
+2. Implementing the Runnable Interface
+
+		Life Cycle of a Thread
+
+
+1.New − A new thread begins its life cycle in the new state. It remains in this state until the program starts the thread.
+
+2.Runnable − A thread in this state is considered to be executing its task.
+
+3.Waiting − Sometimes, a thread transitions to the waiting state while the thread waits for another thread to perform a task. A thread transitions back to the runnable state only when another thread signals the waiting thread to continue executing.
+
+4.Timed Waiting − A runnable thread can enter the timed waiting state for a specified interval of time. A thread in this state transitions back to the runnable state when that time interval expires or when the event it is waiting for occurs.
+
+5.Terminated (Dead) − A runnable thread enters the terminated state when it completes its task or otherwise terminates.
+	
+
+
+Create a Thread by Implementing a Runnable Interface
+
+-->Step 1
+As a first step, you need to implement a run() method provided by a Runnable interface. This method provides an entry point for the thread and you will put your complete business logic inside this method. 
+
+public void run( )
+
+-->Step 2
+As a second step, you will instantiate a Thread object using the following constructor −
+
+Thread(Runnable threadObj, String threadName);
+Where, threadObj is an instance of a class that implements the Runnable interface and threadName is the name given to the new thread.
+
+-->Step 3
+Once a Thread object is created, you can start it by calling start() method, which executes a call to run( ) method. Following is a simple syntax of start() method −
+
+void start();
+
+
+	Create a Thread by Extending a Thread Class
+
+-->Step 1
+You will need to override run( ) method available in Thread class. This method provides an entry point for the thread and you will put your complete business logic inside this method. 
+
+public void run( )
+
+-->Step 2
+Once Thread object is created, you can start it by calling start() method, which executes a call to run( ) method
+
+void start( );
+
+
+	advantages and disadvantages of threads in java
+	Advantages:
+
+Some advantages include:
+     1. Reduces development time.
+     2. Reduces maintenance costs.
+     3. Improves the performance of complex applications.
+     4. Parallelize tasks
+
+	Disadvantages:
+
+Some disadvantages include:
+
+ 1.Difficulty of writing code
+Multithreaded and multicontexted applications are not easy to write. 
+
+2.Difficulty of debugging
+
+3.Difficulty of managing concurrency
+
+4.Difficulty of testing
+Testing a multithreaded application is more difficult than testing a single-threaded application because defects are often timing-related and more difficult to reproduce.
+
+
+
+		"Java Runnable Interface"
+
+.Java runnable is an interface used to execute code on a concurrent thread. It is an interface which is implemented by any class if we want that the instances of that class should be executed by a thread.
+
+.The runnable interface has an undefined method run() with void as return type, and it takes in no arguments.
+
+.The runnable interface provides a standard set of rules for the instances of classes which wish to execute code when they are active. 
+
+.Runnable class is extensively used in network programming as each thread represents a separate flow of control. Also in multi-threaded programming, Runnable class is used. This interface is present in java.lang package.
+
+	How to create a thread using Runnable interface
+
+To create a thread using runnable, use the following code-
+
+Runnable runnable = new MyRunnable();    
+Thread thread = new Thread(runnable);  
+thread.start();  
+
+The thread will execute the code which is mentioned in the run() method of the Runnable object passed in its argument.
+
+
+			ThreadGroup in Java
+.Java provides a convenient way to group multiple threads in a single object. In such way, we can suspend, resume or interrupt group of threads by a single method call.
+
+
+.Java thread group is implemented by java.lang.ThreadGroup class.
+
+.A ThreadGroup represents a set of threads. A thread group can also include the other thread group. The thread group creates a tree in which every thread group except the initial thread group has a parent.
+
+.A thread is allowed to access information about its own thread group, but it cannot access the information about its thread group's parent thread group or any other thread groups.
+
+-->Let's see a code to group multiple threads.
+
+ThreadGroup tg1 = new ThreadGroup("Group A");   
+Thread t1 = new Thread(tg1,new MyRunnable(),"one");     
+Thread t2 = new Thread(tg1,new MyRunnable(),"two");     
+Thread t3 = new Thread(tg1,new MyRunnable(),"three");    
+
+Now all 3 threads belong to one group. Here, tg1 is the thread group name, MyRunnable is the class that implements Runnable interface and "one", "two" and "three" are the thread names.
+
+-->Now we can interrupt all threads by a single line of code only.
+
+Thread.currentThread().getThreadGroup().interrupt(); 
+
+
+			Synchronization in Java
+
+.Synchronization in java is the capability to control the access of multiple threads to any shared resource.
+
+.Java Synchronization is better option where we want to allow only one thread to access the shared resource.
+
+		Why use Synchronization
+The synchronization is mainly used to:-
+
+1.To prevent thread interference.
+2.To prevent consistency problem.
+		
+
+		Types of Synchronization
+
+-->There are two types of synchronization
+
+1.Process Synchronization
+2.Thread Synchronization
+
+
+
+-->Thread Synchronization
+
+There are two types of thread synchronization mutual exclusive and inter-thread communication.
+
+1.Mutual Exclusive
+	A.Synchronized method.
+	B.Synchronized block.
+	C.static synchronization.
+
+2.Cooperation (Inter-thread communication in java)
+
+
+
+		Inter-thread communication
+
+
+.Inter-thread communication or Co-operation is all about allowing synchronized threads to communicate with each other.
+
+.Cooperation (Inter-thread communication) is a mechanism in which a thread is paused running in its critical section and another thread is allowed to enter (or lock) in the same critical section to be executed.It is implemented by following methods of Object class:
+
+wait()
+notify()
+notifyAll()
+
+1) wait() method:-
+
+Causes current thread to release the lock and wait until either another thread invokes the notify() method or the notifyAll() method for this object, or a specified amount of time has elapsed.
+
+The current thread must own this object's monitor, so it must be called from the synchronized method only otherwise it will throw exception.
+
+-->		Method							Description
+public final void wait()throws InterruptedException	           waits until object is notified.
+public final void wait(long timeout)throws InterruptedException	   waits for the specified amount of time.
+
+2) notify() method:-
+
+Wakes up a single thread that is waiting on this object's monitor. If any threads are waiting on this object, one of them is chosen to be awakened. The choice is arbitrary and occurs at the discretion of the implementation. Syntax:
+
+public final void notify()
+
+3) notifyAll() method:-
+
+Wakes up all threads that are waiting on this object's monitor. 
+Syntax:
+public final void notifyAll()

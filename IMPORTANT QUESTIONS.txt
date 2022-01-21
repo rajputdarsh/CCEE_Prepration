@@ -1,0 +1,287 @@
+What is the static import?
+By static import, we can access the static members of a class directly, and there is no need to write fully qualified name.
+
+---------------------------------------------------
+
+An exception is an event, which occurs during the execution of a program, that disrupts the normal flow of the program's instructions. 
+
+---------------------------------------------------
+
+Error : An Error “indicates serious problems that a reasonable application should not try to catch.” Both Errors and Exceptions are the subclasses of java. lang. Throwable class. Errors are the conditions which cannot get recovered by any handling techniques.
+
+---------------------------------------------------
+
+Java inner class or nested class is a class which is declared inside the class or interface.
+We use inner classes to logically group classes and interfaces in one place so that it can be more readable and maintainable.
+Additionally, it can access all the members of outer class including private data members and methods.
+
+---------------------------------------------------
+		nested vs inner classes diff 
+
+https://www.geeksforgeeks.org/nested-classes-java/
+
+---------------------------------------------------
+		Java Nested Interface
+
+An interface i.e. declared within another interface or class is known as nested interface. The nested interfaces are used to group related interfaces so that they can be easy to maintain. The nested interface must be referred by the outer interface or class. It can't be accessed directly.
+
+Nested interface must be public if it is declared inside the interface but it can have any access modifier if declared within the class.
+Nested interfaces are declared static implicitely.
+
+
+
+
+---------------------------------------------------
+
+	Can we define a class inside the interface?
+
+Yes, If we define a class inside the interface, java compiler creates a static nested class. Let's see how can we define a class within the interface:
+
+interface M{  
+  class A{}  
+
+---------------------------------------------------
+
+	Reflection in Java
+
+Reflection is an API which is used to examine or modify the behavior of methods, classes, interfaces at runtime.
+
+The required classes for reflection are provided under java.lang.reflect package.
+Reflection gives us information about the class to which an object belongs and also the methods of that class which can be executed by using the object.
+Through reflection we can invoke methods at runtime irrespective of the access specifier used with them
+
+---------------------------------------------------
+
+	Context switching 
+
+A context switching helps to share a single CPU across all processes to complete its execution and store the system's tasks status. When the process reloads in the system, the execution of the process starts at the same point where another process stopped it
+---------------------------------------------------
+
+
+Can we call the run() method instead of start()?
+
+Yes, calling run() method directly is valid, but it will not work as a thread instead it will work as a normal object. There will not be context-switching between the threads. When we call the start() method, it internally calls the run() method, which creates a new stack for a thread while directly calling the run() will not create a new stack.
+
+
+---------------------------------------------------
+
+When should we interrupt the thread.?
+
+	Java Thread interrupt() method
+
+The interrupt() method of thread class is used to interrupt the thread. If any thread is in sleeping or waiting state  then using the interrupt() method, we can interrupt the thread execution by throwing InterruptedException.
+
+---------------------------------------------------
+
+What is static synchronization?
+If you make any static method as synchronized, the lock will be on the class not on the object. If we use the synchronized keyword before a method so it will lock the object (one thread can access an object at a time) but if we use static synchronized so it will lock a class (one thread can access a class at a time)
+
+---------------------------------------------------
+
+What is Thread Scheduler in java?
+In Java, when we create the threads, they are supervised with the help of a Thread Scheduler, which is the part of JVM. Thread scheduler is only responsible for deciding which thread should be executed. Thread scheduler uses two mechanisms for scheduling the threads: Preemptive and Time Slicing.
+
+
+Java thread scheduler also works for deciding the following for a thread:
+It selects the priority of the thread.
+It determines the waiting time for a thread
+It checks the Nature of thread
+---------------------------------------------------
+
+29) Does each thread have its stack in multithreaded programming?
+
+Yes, in multithreaded programming every thread maintains its own or separate stack area in memory due to which every thread is independent of each other.
+---------------------------------------------------
+
+30) How is the safety of a thread achieved?
+
+If a method or class object can be used by multiple threads at a time without any race condition, then the class is thread-safe. Thread safety is used to make a program safe to use in multithreaded programming. It can be achieved by the following ways:
+
+Synchronization
+Using Volatile keyword
+Using a lock based mechanism
+Use of atomic wrapper classes
+
+---------------------------------------------------
+
+31) What is race-condition?
+
+A Race condition is a problem which occurs in the multithreaded programming when various threads execute simultaneously accessing a shared resource at the same time. The proper use of synchronization can avoid the Race condition.
+---------------------------------------------------
+32) What is the volatile keyword in java?
+
+Volatile keyword is used in multithreaded programming to achieve the thread safety, as a change in one volatile variable is visible to all other threads so one variable can be used by one thread at a time.
+---------------------------------------------------
+What do you understand by thread pool?
+
+Java Thread pool represents a group of worker threads, which are waiting for the task to be allocated.
+Threads in the thread pool are supervised by the service provider which pulls one thread from the pool and assign a job to it.
+After completion of the given task, thread again came to the thread pool.
+The size of the thread pool depends on the total number of threads kept at reserve for execution.
+
+
+
+
+
+---------------------------------------------------
+
+Whenever we want to stop a thread from running state by calling stop() method of Thread class in Java. This method stops the execution of a running thread and removes it from the waiting threads pool and garbage collected. A thread will also move to the dead state automatically when it reaches the end of its method.
+
+
+
+
+
+
+---------------------------------------------------
+
+Statement	
+
+Use this for general-purpose access to your database. Useful when you are using static SQL statements at runtime. The Statement interface cannot accept parameters.
+
+PreparedStatement
+	
+Use this when you plan to use the SQL statements many times. The PreparedStatement interface accepts input parameters at runtime.
+
+CallableStatement
+
+Use this when you want to access the database stored procedures. The CallableStatement interface can also accept runtime input parameters.
+
+
+
+
+---------------------------------------------------
+
+Why do we need to close the connection in database , what if we dont?
+
+
+If we don't close the connection, it will lead to connection memory leakage. Unless/until application server/web server is shut down, connection will remain activate even though the user logs out.
+
+There are additional reasons. Suppose database server has 10 connections available and 10 clients request for the connection. If the database sever grants all of them, and after their usage they are not closed, the database server would not be able to provide a connections for another request. For that reason we need to close them - it is mandatory.
+
+
+
+---------------------------------------------------
+
+
+Managing Session in Servlets
+
+
+We all know that HTTP is a stateless protocol. All requests and responses are independent. But sometimes you need to keep track of client's activity across multiple requests. For eg. When a User logs into your website, not matter on which web page he visits after logging in, his credentials will be with the server, until he logs out. So this is managed by creating a session.
+Session Management is a mechanism used by the Web container to store session information for a particular user. There are four different techniques used by Servlet application for session management. They are as follows:
+1.	Cookies
+2.	Hidden form field
+3.	URL Rewriting
+4.	HttpSession
+Session is used to store everything that we can get from the client from all the requests the client makes.________________________________________
+
+
+How Session Works
+ 
+
+
+The basic concept behind session is, whenever a user starts using our application, we can save a unique identification information about him, in an object which is available throughout the application, until its destroyed. So wherever the user goes, we will always have his information and we can always manage which user is doing what. Whenever a user wants to exit from your application, destroy the object with his information.
+
+
+
+========================================================
+			@Embeddabl
+
+Consider the following relationship between Student and Address entity.
+
+According to the relationship each student should have a unique address.
+
+@Embeddable annotation is used to specify the Address class will be used as a component. The Address class cannot have a primary key of its own, it uses the enclosing class primary key.
+
+
+
+
+==================================================
+
+Difference Between BeanFactory and ApplicationContext
+
+
+BeanFactory loads beans on-demand, while ApplicationContext loads all beans at startup. Thus, BeanFactory is lightweight as compared to ApplicationContext.
+
+. Lazy Loading With BeanFactory
+
+. Eager Loading With ApplicationContext
+
+================================================
+
+A proxy is a subclass implemented at runtime. Hibernate creates a proxy (a subclass of the class being fetched) instead of querying the database directly, and this proxy will load the "real" object from the database whenever one of its methods is called.
+
+
+
+
+
+
+===================================================
+
+A mutex (or mutual exclusion) is the simplest type of synchronizer – it ensures that only one thread can execute the critical section of a computer program at a time.
+
+To access a critical section, a thread acquires the mutex, then accesses the critical section, and finally releases the mutex. In the meantime, all other threads block till the mutex releases. As soon as a thread exits the critical section, another thread can enter the critical section.
+
+=========================================
+
+A Semaphore is a thread synchronization technique that can be used either to send signals between threads to avoid missed signals, or to guard a critical section like you would do with a lock
+
+===============================================
+
+
+What is Java Heap Space
+
+It is created by the Java Virtual Machine when it starts. The memory is used as long as the application is running. Java runtime uses it to allocate memory to objects and Java Runtime Environment (JRE) classes.
+
+When an object is created, it is always created in Heap and has global access. That means all objects can be referenced from anywhere in the application.
+
+
+================================================
+What is Java Stack Memory?
+
+This is the temporary memory where variable values are stored when their methods are invoked. After the method is finished, the memory containing those values is cleared to make room for new methods.
+
+When a new method is invoked, a new block of memory will be created in the Stack. This new block will store the temporary values invoked by the method and references to objects stored in the Heap that are being used by the method.
+
+Any values in this block are only accessible by the current method and will not exist once it ends.
+
+
+=====================================================
+
+best collection for insertion and deletion ?
+
+Singly linked list is the best , its time complexity of insertion and deletion is O(1) , it means fastest
+
+
+===========================================
+All types of DS with real world example
+
+https://www.geeksforgeeks.org/real-time-application-of-data-structures/
+
+
+
+
+
+
+
+
+=============================================
+threaded binary trees
+
+The idea of threaded binary trees is to make inorder traversal faster and do it without stack and without recursion. A binary tree is made threaded by making all leaf child pointers that would normally be NULL point to the inorder successor of the node (if it exists).
+
+
+
+
+==================================================
+
+How do I get rid of white space in Java?
+To remove all white spaces from String, use replaceAll() method of String class with two arguments, i.e.
+
+replaceAll("\\s", "");
+
+
+
+===========================================
+CROSS JOIN == Cartesian join
+
+In SQL, the CROSS JOIN is used to combine each row of the first table with each row of the second table. It is also known as the Cartesian join since it returns the Cartesian product of the sets of rows from the joined tables.

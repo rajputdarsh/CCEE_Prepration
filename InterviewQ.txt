@@ -1,0 +1,298 @@
+[4:48 pm, 21/08/2021] Samir Kanhere TPO Cdac MET: Please find the below questions for interview purpose. 
+1) OPPS concept( 4 pillers with real time example)
+2) Exception Handling 
+3) Multithreading in java
+4) Features of Java
+5) Why String is Immutable in java
+6) Write your own Custom Immutable class.
+7) Features of Java 8
+8) Method overloading vs method overriding 
+9) Collection in java Hierarchy 
+10) Arraylist vs linkedlist
+11) Hashmap vs concurrentHashmap
+12) Comparable vs comperator
+
+And for the database part below are the questions,
+1) what is DDL, DML, DCL.
+2) Triggers and procedures syntax. 
+3) ACID property. 
+4) what is Normalization and what are the various forms.
+5) Basic Insert and Update script.
+6) Delete vs truncate 
+7) find the 2nd highest salary of the employee.
+[4:48 pm, 21/08/2021] Samir Kanhere TPO Cdac MET: Morningstar technical interview
+1. Tell me about yourself
+2. Which languages are you most comfortable with?
+3.What is difference between stack and heap? 
+4.Can u overload main function?
+5. What is string pool? 
+6. How to use hashmap to add data?
+7. What will happen if we use throws IOException on parent class and throws Exception on child class
+8.Why wait and notify is declared in Object class instead of Thread?
+9. Puzzles (2 questions )
+[4:48 pm, 21/08/2021] Samir Kanhere TPO Cdac MET: 10) What are microservices?
+11) What is nodejs?
+12) how will you connect front end with backend
+[4:48 pm, 21/08/2021] Samir Kanhere TPO Cdac MET: 13) what is pom.xml? What are the different dependencies u know?
+14)what is  Serializable ?
+15) what are different frameworks u know?
+[4:48 pm, 21/08/2021] Samir Kanhere TPO Cdac MET: 9)Explain your project?
+[4:48 pm, 21/08/2021] Samir Kanhere TPO Cdac MET: Questions for interview
+
+
+1)What is abstraction?
+2)How collections works?
+3)What is difference between List and Map?
+4)What is dependency injection? How will you do it?
+5)What is hibernate?
+6)Autowired is used for?
+7)What are different types of joins?
+8)Two tables will be given and will ask to create left outer join
+[4:48 pm, 21/08/2021] Samir Kanhere TPO Cdac MET: 1)What is multithreding  ...
+2) How  to write a thread  ... and methods 
+3) what is exception n types 
+4) difference  bet checked n unchecked exception 
+5) dependcy injection in spring 
+6) annotation in hibernate 
+7) hiberanate  relations 
+8) primary key,  foreign key , unique         key
+9) data types 
+10) how to write a query for aggregate  
+11) project related questions
+[4:48 pm, 21/08/2021] Samir Kanhere TPO Cdac MET: Spring Questions :
+- Study MVC & How you implemented MVC model in your project. Most important this question is.
+- Study annotations few of them I've listed here :
+   1.@Component
+   2. @Autowired
+   3. @Configuration
+   4. @Bean
+   5. @RestController & @Controller.
+   6. @GetMapping & @PostMapping.
+- Dependency Injection & IoC
+- Cyclic Dependency
+- Spring Architecture ratta maark jao
+- Dispatcher Servlet.
+- POM.xml use 
+- Global configuration properties how to write in Spring.
+- Have basic knowledge of AOP & What is boiler plate code.
+- Repository & DTOs in Spring 
+- Spring vs Spring Boot
+- Have knowledge of latest version of Spring boot in market.
+
+
+
+[9:24 am, 22/08/2021] Samir Kanhere TPO Cdac MET: 1) what is Exception 
+2) primary key,foreign  Key,Unique key
+3) OOP concepts
+4) method Hiding 
+5) Types of Joins
+6) Project Role
+[9:24 am, 22/08/2021] Samir Kanhere TPO Cdac MET: 1)What is multithreding  ...
+2) How  to write a thread  ... and methods 
+3) what is exception n types 
+4) difference  bet checked n unchecked exception 
+5) dependcy injection in spring 
+6) annotation in hibernate 
+7) hiberanate  relations 
+8) primary key,  foreign key , unique         key
+9) data types 
+10) how to write a query for aggregate  
+11) project related questions
+[9:24 am, 22/08/2021] Samir Kanhere TPO Cdac MET: Smartstream questions for QA:-
+1st technical round  
+1)pseudocode for binary search 
+https://www.tutorialspoint.com/data_structures_algorithms/binary_search_algorithm.htm
+2) pyramid pattern program 
+        *
+      * * *
+    * * * * *
+  * * * * * * *
+* * * * * * * * *
+C Program
+
+#include <stdio.h>
+int main() {
+   int i, space, rows, k = 0;
+   printf("Enter the number of rows: ");
+   scanf("%d", &rows);
+   for (i = 1; i <= rows; ++i, k = 0) {
+      for (space = 1; space <= rows - i; ++space) {
+         printf("  ");
+      }
+      while (k != 2 * i - 1) {
+         printf("* ");
+         ++k;
+      }
+      printf("\n");
+   }
+   return 0;
+}
+3) swap 2 numbers without using 3rd variable and without using +,- operators
+solution:-https://www.geeksforgeeks.org/swap-t…
+[9:24 am, 22/08/2021] Samir Kanhere TPO Cdac MET: Please find the below questions for interview purpose. 
+1) OPPS concept( 4 pillers with real time example)
+2) Exception Handling 
+3) Multithreading in java
+4) Features of Java
+5) Why String is Immutable in java
+6) Write your own Custom Immutable class.
+7) Features of Java 8
+8) Method overloading vs method overriding 
+9) Collection in java Hierarchy 
+10) Arraylist vs linkedlist
+11) Hashmap vs concurrentHashmap
+12) Comparable vs comperator
+
+And for the database part below are the questions,
+1) what is DDL, DML, DCL.
+2) Triggers and procedures syntax. 
+3) ACID property. 
+4) what is Normalization and what are the various forms.
+5) Basic Insert and Update script.
+6) Delete vs truncate 
+7) find the 2nd highest salary of the employee.
+[9:24 am, 22/08/2021] Samir Kanhere TPO Cdac MET: 1: Oop concept (inheritance,  abstraction)
+2 : project details 
+3:  tell about stack and quee
+[9:24 am, 22/08/2021] Samir Kanhere TPO Cdac MET: Cybage 
+Tell me abt urself 
+Your role in project 
+Project briefly 
+Web services
+How handle load on server 
+Triggers 
+Response object
+Get post put delete
+Which tech would like to work 
+Dotnet java angular 
+N why
+[9:24 am, 22/08/2021] Samir Kanhere TPO Cdac MET: Routing in angular how you used
+Write component which you used in project
+Oops
+Mysql
+Swap without using third variable
+Keys 
+Primary vs unique
+What is rest api
+Put vs post
+Synchronization
+Final
+Finally
+Final with code
+How to make variable constant write code
+Finally
+[9:24 am, 22/08/2021] Samir Kanhere TPO Cdac MET: 1.Tell me about yourself
+2.Tell me about your project
+3.Have u know cloud computing how it works 
+4.Have u implement more than one primary key in your project .
+5.have u tried to implement multiple  primery keys in one table
+6.Teach me database in 5 min 
+7.Have u implement fuctions or procedure in database 
+8.If u have to explain cloud to u r family member how will u explain that
+9.
+Why should we hire u
+10.
+How security is  implement in u r project 
+11.http vs https
+12.ask any ques if u have
+[9:24 am, 22/08/2021] Samir Kanhere TPO Cdac MET: For Cgbage software
+[9:24 am, 22/08/2021] Samir Kanhere TPO Cdac MET: 1)explain project(cdac project) in detail
+2)what is data structure,it's type,and example?
+3)which data structure is used in recursion?
+4)what is join why they are used?
+5)different type of joins?
+6)write program fr zig zag no. Pattern
+[9:24 am, 22/08/2021] Samir Kanhere TPO Cdac MET: 1)what are you learn in advance software engineering?
+2:)what is github explain the working?
+3:)are you know about devops?
+4:)how you connect your database with your java package?
+5:)are you know about multithreading?
+6:)how multithread works  explain?
+7:)are you ever heard about deadlock?
+8:)can we overcome deadlock problem with explaination?
+9:)what is mutexlock?
+10:)difference between process and thread?
+11:)what is pre-emptive and non pre-emptive?
+12:)how process works?
+13:)difference between wait and suspend wait?
+14:)difference between ddl and dml?
+15:)can we rollback ddl?
+16:)what is primerykey and foringekey?
+17:)what is view?
+18:)write a query to find 5th max salary?
+19:)explain your project within 60seconds?
+20:)what is bcnf?
+[9:24 am, 22/08/2021] Samir Kanhere TPO Cdac MET: 1)tell me about your self.
+2) Describe your project.
+3)1 sql query:2 tables emp and dept...write a query to display department name and no of employees in that department.
+4)program : calculate and add 1st 2 and last 2 digits of a given number
+5)what is linked list explain with example
+6)what is encapsulation and explain with example.
+[9:24 am, 22/08/2021] Samir Kanhere TPO Cdac MET: Suraj Dakua
+TIAA Technical Round 2 (L2) :
+1. Introduce yourself tell me about history in academics what all you've done. 
+* WAP of Stack full code with Time Complexity and other ways of implementing Stack.
+2. What was your project in B.E.
+3. How many group member's where there in your BE project ?
+4. What was your role ?
+5. Challenges faced during your BE project ?
+6. Spring Boot Questions :
+    - What you mean by Rapid Application Development in Spring Boot ?
+   - How to create a Spring Boot Application ?
+   - Spring security encryption using AES and Bearer
+   - Annotations in Spring
+ 7. Explain methods of Restful Web services
+8. How will you do packaging in Java ? What packaging in Java
+9. Tell me about JAR and WAR
+10. Server used in Spring
+11. Core Java
+ …
+[9:24 am, 22/08/2021] Samir Kanhere TPO Cdac MET: Suraj Dakua
+TIAA Technical Round 1 ( L1) :
+1. Introduce yourself don't tell about your family here
+2. Open notepad WAP to find duplicates in an array and also state the time complexity of your code how can you reduce Time Complexity. Optimize the code.
+3. What all technologies used in your project ?
+4. Questions on Spring Boot
+    - How will you create bean in Spring ? What iz the annotation used for creating bean ?
+    - ORM model how it works w.r.t Spring
+    - Explain @RestController
+    - Why you've used Spring ?
+5. Restful Web services
+6. Database Questions :
+    - Types of join
+    - Explain Self Join where to use Self Join
+   - Procedures in / out / inout
+7. Ques on Javascript
+    - What is Nan
+    - Explain REPL in Javascript
+    - Methods in DOM mod…
+[9:24 am, 22/08/2021] Samir Kanhere TPO Cdac MET: Suraj Dakua
+TIAA Managerial Round Final :
+- Introduce yourself be calm and tell everything about yourself
+- Journey of your CDAC
+- Project
+- Spring MVC vs Spring Boot
+- Shown him my project flowchart DB design 
+- Programming Style used in your project 
+    - I said OOP he said which Pillars. I said SOLID Principles and explained them he was impressed.
+-  What UI technologies you know ?
+- Questions on DB design
+   - Indexes 
+   - Foreign Key
+- What is SDLC explain ?
+- Why is Agile dev better than Waterfall Model
+- Why we need web server ? Tell md web servers you know
+- What is microservice and monolithic service
+- How can you acheive loose coupling ? Why loose coupling is needed ?
+- What is SOA Service Oriented Architecture
+- what is Authentication and Author…
+[9:24 am, 22/08/2021] Samir Kanhere TPO Cdac MET: Morningstar technical interview
+1. Tell me about yourself
+2. Which languages are you most comfortable with?
+3.What is difference between stack and heap? 
+4.Can u overload main function?
+5. What is string pool? 
+6. How to use hashmap to add data?
+7. What will happen if we use throws IOException on parent class and throws Exception on child class
+8.Why wait and notify is declared in Object class instead of Thread?
+9. Puzzles (2 questions )

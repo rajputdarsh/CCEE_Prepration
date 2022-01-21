@@ -1,0 +1,173 @@
+Teaching Guidelines for
+Database Technologies
+Diploma in Advanced Computing (e-DAC)
+May 2021
+Duration: 30 theory hours + 30 lab hours (60 hours)
+Objective: To introduce students to RDBMS and NoSQL Databases and facilitate hands-on experience
+on SQL (Using MySQL) and MongoDB.
+Prerequisites: Working Knowledge of Windows and Linux, Familiarity with Programming and Object
+Oriented concepts.
+Evaluation: 100 Marks
+Weightage: Theory Exam – 40%, Lab exam – 40%, Internal exam– 20%
+Text Book:
+ Murach's MySQL by Joel Murach / Shroff Publisher
+References:
+ Database System Concepts by Abraham Silberschatz, Henry Korth and S. Sudarshan / McGraw Hill
+ Database Design and Relational Theory: Normal Forms and All That Jazz by C. J. Date (Author) /
+O'Reilly
+ Fundamentals of Database System by Shamkant B. Navathe, Ramez Elmasri / Pearson
+ MySQL: The Complete Reference by Vikram Vaswani / McGraw Hill
+ SQL & NoSQL Databases: Models, Languages, Consistency Options and Architectures for Big Data
+Management by Andreas Meier and Michael Kaufmann / Springer
+ MongoDB: The Definitive Guide by Shannon Bradshaw, Eoin Brazil and Kristina Chodorow / O'Reilly
+ http://bigdata.stratebi.com/?language=en
+(Note: Each Session is of 2 hours)
+
+Session 1:
+Lecture
+Introduction to DBMS, Basic Database Terminology
+Database Storage Architecture, Concept of Database Instance and Schema, Distributed Databases
+Types of DBMS: Relational, Object Relational and NoSQL Databases
+Data Models (Conceptual, Logical, Physical), Codd’s 12 rules for RDBMS
+Database Design, Entity-Relationship Diagram (ERD)
+Lab
+Using MySQL Monitor, Shell and Workbench
+ER Diagrams to Relational Table mapping
+
+Session 2:
+Lecture
+Introduction to SQL, Categories of SQL Commands: DDL, DML, DCL, DTL/TCL.
+Introduction to MySQL, MySQL Clients (Monitor, Shell, Workbench).
+SQL/MySQL Data Types, Database Constraints (Primary Key, Unique, Not Null, Foreign Key, Default,
+Check)
+Lab (3 hrs)
+Performing basic CREATE, SELECT, INSERT, UPDATE, DELETE, DROP operations on Tables
+
+
+Session 3:
+Lecture
+Normalization, Need for Normalization
+Data Redundancy, Data Anomalies, Functional Dependency
+Normal Forms (1NF, 2NF, 3NF, BCNF) with examples, Introduction to 4th and 5th NF, Need of
+Denormalization
+Lab
+Perform 1NF, 2NF, 3NF, BCNF
+
+Session 4:
+Lecture
+LIKE Operator, DISTINCT, Sorting (Order by clause).
+BETWEEN, AND, OR Operators, Comparing Nulls (IS NULL/IS Not NULL), IN/NOT IN
+Relational Algebra Operations (Selection, Projection, Union, Intersect, Minus)
+Lab
+Using Like, Distinct, Order By, Between...And
+Comparing Nulls, Using IN/Not-In
+Union/Union ALL
+
+Session 5:
+Lecture
+Aggregate Functions
+Grouping Things Together (Group By, Having)
+Lab
+Defining Data Types for Columns
+Creating, Altering, Dropping Constraints
+Aggregate Functions: SUM(), AVG(), COUNT(), MAX(), MIN(), COUNT()
+Using Group By, Having Clause
+
+Session 6:
+Lecture
+Joins (Equi, Inner, Outer, Natural, Cross), SQL Standard Syntax for Joins
+Copying table structure/data, Sequences (AUTO_INCREMENT)
+Lab
+Queries on Various type of Joins using OLD and SQL Standard Syntax
+Copying table structure, Copying data from one table to another
+Using AUTO_INCREMENT
+
+Session 7:
+Lecture
+Subquery, Correlated Subquery, EXISTS/NOT EXISTS
+TCL Commands (Commit/Rollback/SavePoint), DCL Commands (GRANT/REVOKE/GRANT OPTION)
+Lab (3 hrs)
+SubQueries, Correlated Queries
+Using Exists/Not-Exists
+Using Commit/Rollback/Savepoint
+Granting/revoking privileges on database objects
+
+Session 8:
+Lecture
+Views, Types of Views, Simple and Complex Views
+Indexes, Benefit of Indexes, Type of Indexes, Temporary Tables
+MySQL Storage Engines (InnoDB, MyISAM and others),
+ACID Properties, Concurrency and Locks
+Lab
+Creating Views, Querying using Views
+Creating Indexes
+Creating Temporary Tables
+Database Locks
+
+Session 9:
+Lecture
+Introduction to MySQL Programming, Use of MySQL Programs,
+Introduction to Stored Procedures, Benefits of Stored Procedures
+Procedure Parameters (IN, OUT and INOUT)
+Lab
+Creating procedure without parameters
+Creating Procedure with (IN/OUT/INOUT) Parameters
+
+Session 10:
+Lecture
+Flow Control Statements (LOOP, WHILE and REPEAT)
+Using above statements in Stored Procedures/ Functions
+Conditional Statements (IF, IF-ELSE-THEN, SWITCH CASE)
+Example of each type of statement
+Lab
+Use of flow control statement in Stored Procedure
+Use of conditional statements in Stored Procedure
+
+Session 11:
+Lecture
+Loop constructs (ITERATE, LEAVE)
+Functions with and without parameters
+MySQL Built-in functions (string, numeric, date etc.)
+Lab
+Creating Function and returning value from it
+Use of built-in functions in queries
+Session 12:
+Lecture
+Cursors (Asensitive, Insensitive, Read only, Nonscrollable)
+Cursors example and real time use
+Triggers (BEFORE, AFTER), New and Old trigger variables
+Trigger Examples and real time use
+Full-Text Search, Pattern Matching with RegEx
+Lab
+Writing procedures with Declare, fetch and close cursor
+Example of each type of cursors
+Create Triggers
+Creating FULLTEXT Indexes for Full-Text Search
+Using RegEx in queries
+
+Sessions 13 & 14:
+Lecture
+Introduction to NoSQL database, Features of NoSQL Database
+Structured vs. Semistructured and Unstructured Data
+Difference between RDBMS and NoSQL databases,
+CAP Theorem, BASE Model
+Categories of NoSQL Databases
+Introduction to MongoDB, Features of MongoDB
+MongoDB command interface and MongoDB compass
+MongoDB Documents & Collections
+RDBMS & MongoDB analogies: relations/tables => collections; tuples/records => documents
+JSON and BSON documents
+Performing CRUD (CREATE, READ, UPDATE, DELETE) Operations, UPSERT
+Lab (2 hrs)
+Using MongoDB Shell and Compass
+Creating Collections in MongDB
+Performing Basic CRUD operations
+Session 15:
+Lecture
+MongoDB Operators, Sorting and Indexing in MongoDB
+Migrating from RDBMS to NoSQL
+Lab
+Complex Searching Using MongoDB Operators
+Sorting data
+Creating and and using indexes
+Migrating from MySQL to MongoDB and Vice versa
